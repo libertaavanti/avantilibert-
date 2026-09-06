@@ -454,7 +454,21 @@ footer p {
     gap: 25px;
     text-align: center;
   }
+  /* MANIFESTO IMMAGINE */
+.manifesto-content {
+    margin-top: 40px;
+    text-align: center;
+}
 
+.manifesto-content img {
+    width: 100%;
+    max-width: 750px;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    border-radius: 8px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+}
   footer {
     flex-direction: column;
     gap: 20px;
