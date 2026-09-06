@@ -1,1 +1,464 @@
+/* IMPORT FONT */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&display=swap');
 
+
+/* RESET */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Montserrat', Arial, sans-serif;
+  background: #1b0b3a;
+  color: white;
+}
+
+
+/* NAVBAR */
+
+.navbar {
+  height: 85px;
+  padding: 0 7%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #1b0b3a;
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+}
+
+.logo-area {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.logo-area img {
+  width: 62px;
+  height: 62px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 3px solid #7c3aed;
+}
+
+.logo-text {
+  display: flex;
+  flex-direction: column;
+  line-height: 0.9;
+  font-size: 20px;
+}
+
+.logo-text strong {
+  color: white;
+}
+
+.logo-text span {
+  color: #ffd500;
+  font-weight: 900;
+}
+
+
+/* MENU */
+
+nav {
+  display: flex;
+  gap: 28px;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+nav a:hover,
+nav a.active {
+  color: #ffd500;
+}
+
+.join-btn,
+.main-btn {
+  background: #ffd500;
+  color: #1b0b3a;
+  padding: 13px 24px;
+  border-radius: 30px;
+  font-weight: 800;
+  text-decoration: none;
+  display: inline-block;
+  transition: 0.3s;
+}
+
+.join-btn:hover,
+.main-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(255,213,0,0.35);
+}
+
+
+/* HERO */
+
+.hero {
+  min-height: 620px;
+  display: flex;
+  align-items: center;
+  padding: 80px 7%;
+  position: relative;
+  overflow: hidden;
+
+  background:
+    linear-gradient(
+      90deg,
+      #1b0b3a 30%,
+      rgba(27,11,58,0.65)
+    ),
+    radial-gradient(
+      circle at 75% 45%,
+      #4b237c,
+      #1b0b3a 65%
+    );
+}
+
+.hero-content {
+  max-width: 650px;
+  position: relative;
+  z-index: 2;
+}
+
+.subtitle {
+  color: #d7d1e5;
+  font-weight: 700;
+  letter-spacing: 2px;
+  margin-bottom: 10px;
+}
+
+.hero h1 {
+  font-size: clamp(65px, 10vw, 130px);
+  line-height: 0.82;
+  font-weight: 900;
+  font-style: italic;
+  margin-bottom: 30px;
+}
+
+.hero h1 span {
+  color: #ffd500;
+}
+
+.hero-description {
+  font-size: 20px;
+  line-height: 1.6;
+  color: #ddd8e7;
+  max-width: 550px;
+  margin-bottom: 30px;
+}
+
+
+/* VALUES */
+
+.values {
+  background: #210d46;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  padding: 45px 7%;
+  border-top: 2px solid #5d2b9b;
+}
+
+.value {
+  text-align: center;
+  padding: 10px 25px;
+  border-right: 1px solid rgba(255,255,255,0.12);
+}
+
+.value:last-child {
+  border-right: none;
+}
+
+.icon {
+  font-size: 40px;
+  color: #ffd500;
+  margin-bottom: 12px;
+}
+
+.value h3 {
+  margin-bottom: 10px;
+  font-size: 17px;
+}
+
+.value p {
+  color: #c9c2d8;
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+
+/* MANIFESTO */
+
+.manifesto {
+  background: #ffd500;
+  color: #1b0b3a;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding: 80px 7%;
+  gap: 60px;
+  align-items: center;
+}
+
+.small-title {
+  font-size: 13px;
+  font-weight: 800;
+  letter-spacing: 1px;
+  margin-bottom: 12px;
+}
+
+.manifesto h2,
+.program h2 {
+  font-size: clamp(38px, 5vw, 65px);
+  line-height: 0.95;
+  margin-bottom: 25px;
+  font-weight: 900;
+}
+
+.manifesto h2 span {
+  color: #1b0b3a;
+}
+
+.manifesto-text p {
+  line-height: 1.7;
+  margin-bottom: 12px;
+  max-width: 500px;
+  font-weight: 500;
+}
+
+.dark-btn {
+  display: inline-block;
+  background: #1b0b3a;
+  color: #ffd500;
+  padding: 15px 25px;
+  margin-top: 20px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: 800;
+}
+
+
+/* BANDIERA */
+
+.manifesto-flag {
+  text-align: center;
+}
+
+.italy-flag {
+  display: flex;
+  width: 300px;
+  height: 110px;
+  margin: auto auto 30px;
+  transform: skewY(-8deg);
+}
+
+.italy-flag span {
+  flex: 1;
+}
+
+.green {
+  background: #009246;
+}
+
+.white {
+  background: white;
+}
+
+.red {
+  background: #ce2b37;
+}
+
+.manifesto-flag p {
+  font-size: 20px;
+  font-style: italic;
+  font-weight: 700;
+}
+
+
+/* PROGRAMMA */
+
+.program {
+  padding: 90px 7%;
+  text-align: center;
+  background: #1b0b3a;
+}
+
+.program h2 {
+  margin-bottom: 50px;
+}
+
+.program h2 span {
+  color: #ffd500;
+}
+
+.program-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  margin-bottom: 50px;
+}
+
+.program-grid div {
+  text-align: left;
+  background: #27104f;
+  padding: 30px;
+  border-radius: 8px;
+  border-top: 3px solid #ffd500;
+}
+
+.program-grid h3 {
+  font-size: 16px;
+  margin-bottom: 20px;
+  color: white;
+}
+
+.program-grid p {
+  color: #c9c2d8;
+  margin-bottom: 10px;
+  font-size: 13px;
+}
+
+
+/* PARTECIPA */
+
+.join-section {
+  background: #291052;
+  padding: 45px 7%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.join-section h2 {
+  font-size: 32px;
+  margin-bottom: 8px;
+}
+
+.join-section p {
+  color: #d6d0e2;
+}
+
+
+/* FOOTER */
+
+footer {
+  background: #140725;
+  padding: 35px 7%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footer-logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.footer-logo img {
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+  border: 2px solid #7c3aed;
+}
+
+.footer-logo div {
+  display: flex;
+  flex-direction: column;
+  font-size: 18px;
+}
+
+.footer-logo span {
+  color: #ffd500;
+  font-weight: 900;
+}
+
+footer p {
+  color: #9f95af;
+  font-size: 13px;
+}
+
+
+/* RESPONSIVE */
+
+@media (max-width: 900px) {
+
+  nav {
+    display: none;
+  }
+
+  .values {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+  }
+
+  .value {
+    border: none;
+  }
+
+  .manifesto {
+    grid-template-columns: 1fr;
+  }
+
+  .program-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+}
+
+
+@media (max-width: 600px) {
+
+  .navbar {
+    padding: 0 5%;
+  }
+
+  .logo-text {
+    font-size: 15px;
+  }
+
+  .join-btn {
+    padding: 10px 15px;
+    font-size: 12px;
+  }
+
+  .hero {
+    padding: 70px 7%;
+    min-height: 550px;
+  }
+
+  .hero-description {
+    font-size: 16px;
+  }
+
+  .values {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .program-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .join-section {
+    flex-direction: column;
+    gap: 25px;
+    text-align: center;
+  }
+
+  footer {
+    flex-direction: column;
+    gap: 20px;
+    text-align: center;
+  }
+
+}
